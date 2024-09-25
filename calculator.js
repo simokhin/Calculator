@@ -37,7 +37,12 @@ function operate(numberX, numberY, operator){
         result = multiply(numberX, numberY);
     }
     else if (operator === "/"){
-        result = divide(numberX, numberY);
+        if (numberY === 0){
+            result = 0;
+        }
+        else {
+            result = divide(numberX, numberY);    
+        }
     }
     return result;
 }
@@ -130,6 +135,12 @@ equals.addEventListener("click", (event) => {
     input.value = "";
     y = +displayValue;
     result = operate(x, y, operator);
+    
+    if (isNaN(result)){
+        return input.value = "";
+        displayValue = "";
+    }
+    
     input.value = `${Math.round(result * 10) / 10}`;
     displayValue = result;
 })
