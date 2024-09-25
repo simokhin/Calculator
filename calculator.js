@@ -3,6 +3,7 @@
 let x;
 let y;
 let operator;
+let displayValue = 0;
 
 // Simple math functions
 
@@ -48,49 +49,91 @@ const one = document.querySelector(".one");
 
 one.addEventListener("click", (event) => {
     populate(1);
-})
+});
 const two = document.querySelector(".two");
 two.addEventListener("click", (event) => {
     populate(2);
-})
+});
 const three = document.querySelector(".three");
 three.addEventListener("click", (event) => {
     populate(3);
-})
+});
 const four = document.querySelector(".four");
 four.addEventListener("click", (event) => {
     populate(4);
-})
+});
 const five = document.querySelector(".five");
 five.addEventListener("click", (event) => {
     populate(5);
-})
+});
 const six = document.querySelector(".six");
 six.addEventListener("click", (event) => {
     populate(6);
-})
+});
 const seven = document.querySelector(".seven");
 seven.addEventListener("click", (event) => {
     populate(7);
-})
+});
 const eight = document.querySelector(".eight");
 eight.addEventListener("click", (event) => {
     populate(8);
-})
+});
 const nine = document.querySelector(".nine");
 nine.addEventListener("click", (event) => {
     populate(9);
-})
+});
 const zero = document.querySelector(".zero");
 zero.addEventListener("click", (event) => {
     populate(0);
+});
+
+// Event listeners for other keys 
+
+const clear = document.querySelector("#clear");
+clear.addEventListener("click", (event) => {
+    input.value = "";
+    displayValue = 0;
+});
+
+const divideButton = document.querySelector("#divide");
+divideButton.addEventListener("click", (event) => {
+    input.value = "";
+    x = displayValue;
+    operator = "/";
+});
+
+const multiplyButton = document.querySelector("#multiply");
+multiplyButton.addEventListener("click", (event) => {
+    input.value = "";
+    x = displayValue;
+    operator = "*";
+});
+
+const subtractButton = document.querySelector("#subtract");
+subtractButton.addEventListener("click", (event) => {
+    input.value = "";
+    x = displayValue;
+    operator = "-";
+})
+
+const addButton = document.querySelector("#add");
+addButton.addEventListener("click", (event) => {
+    input.value = "";
+    x = displayValue;
+    operator = "+";
+})
+
+const equals = document.querySelector("#equals");
+equals.addEventListener("click", (event) => {
+    input.value = "";
+    y = +displayValue;
+    result = operate(x, y, operator);
+    input.value = `${result}`;
 })
 
 // Function to populate and store value 
 
-let displayValue = 0;
-
 function populate(val){
     input.value += `${val}`;
-    displayValue = input.value;
+    displayValue = input.value * 1;
 }
