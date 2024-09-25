@@ -12,7 +12,7 @@ body {
 }
 
 #content {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,8 +82,28 @@ button {
     color: black;
 }
 
-
-
 button:hover{
     opacity: 70%;
+}
+
+footer {
+    height: 5vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#github-logo {
+    width: 15px;
+}
+
+#github-link {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 90%;
 }
