@@ -8,11 +8,39 @@
 }
 
 body {
-    background-color: aliceblue;
+    background-color: white;
+}
+
+header {
+    height: 10vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title, #title2 {
+    padding-left: 40px;
+    cursor: default;
+}
+
+#title:hover {
+    opacity: 90%;
+    cursor: default;
+}
+
+#title {
+    color: white;
+}
+
+#title2 {
+    color: white;
+    font-size: 15px;
+    opacity: 80%;
 }
 
 #content {
-    height: 95vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
