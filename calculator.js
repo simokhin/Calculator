@@ -130,6 +130,11 @@ addButton.addEventListener("click", (event) => {
     operator = "+";
 })
 
+const point = document.querySelector("#point");
+point.addEventListener("click", (event) => {
+    populate(".");
+})
+
 const equals = document.querySelector("#equals");
 equals.addEventListener("click", (event) => {
     input.value = "";
