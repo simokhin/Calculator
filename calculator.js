@@ -93,6 +93,8 @@ const clear = document.querySelector("#clear");
 clear.addEventListener("click", (event) => {
     input.value = "";
     displayValue = 0;
+    x = 0;
+    y = 0;
 });
 
 const divideButton = document.querySelector("#divide");
@@ -128,7 +130,8 @@ equals.addEventListener("click", (event) => {
     input.value = "";
     y = +displayValue;
     result = operate(x, y, operator);
-    input.value = `${result}`;
+    input.value = `${Math.round(result * 10) / 10}`;
+    displayValue = result;
 })
 
 // Function to populate and store value 
