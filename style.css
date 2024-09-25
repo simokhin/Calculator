@@ -30,6 +30,17 @@ body {
     border-radius: 20px;
 }
 
+input {
+    width: 260px;
+    height: 60px;
+    font-size: 50px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    text-align: right;
+}
+
 #row1, #row2, #row3, #row4 {
     display: flex;
     justify-content: space-between;
@@ -71,16 +82,7 @@ button {
     color: black;
 }
 
-input {
-    width: 260px;
-    height: 60px;
-    font-size: 50px;
-    margin-bottom: 10px;
-    background-color: #000000;
-    border: none;
-    color: white;
-    text-align: right;
-}
+
 
 button:hover{
     opacity: 70%;
