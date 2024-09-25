@@ -1,5 +1,5 @@
-let numberX;
-let numberY;
+let x;
+let y;
 let operator;
 
 function add(a, b){
@@ -16,4 +16,19 @@ function multiply(a, b){
 
 function divide(a, b){
     return a / b;
+}
+
+function operate(numberX, numberY, operator){
+    if (operator === "+"){
+        return add(numberX, numberY);
+    }
+    else if (operator === "-"){
+        return subtract(numberX, numberY);
+    }
+    else if (operator === "*"){
+        return multiply(numberX, numberY);
+    }
+    else if (operator === "/"){
+        return divide(numberX, numberY);
+    }
 }
